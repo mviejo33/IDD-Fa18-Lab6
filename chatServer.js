@@ -30,8 +30,8 @@ io.on('connect', function(socket) {
   var questionNum = 0; // keep count of question, used for IF condition.
   socket.on('loaded', function() { // we wait until the client has loaded and contacted us that it is ready to go.
 
-    socket.emit('answer', "Hey, hello I am \"___*-\" a simple chat bot example."); //We start with the introduction;
-    setTimeout(timedQuestion, 5000, socket, "What is your name?"); // Wait a moment and respond with a question.
+    socket.emit('answer', "Hey, hello I am the PizzaMakerBot."); //We start with the introduction;
+    setTimeout(timedQuestion, 5000, socket, "What type of crust would you like in your pizza? We have thin, thick and flatbread crust"); // Wait a moment and respond with a question.
 
   });
   socket.on('message', (data) => { // If we get a new message from the client we process it;
@@ -51,11 +51,11 @@ function bot(data, socket, questionNum) {
 
   /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
-    answer = 'Hello ' + input + ' :-)'; // output response
+    answer = 'Nice! ' + input + ' then'; // output response
     waitTime = 5000;
-    question = 'How old are you?'; // load next question
+    question = 'What type of cheese? Our options are mozzarella, provolone and cheddar'; // load next question
   } else if (questionNum == 1) {
-    answer = 'Really, ' + input + ' years old? So that means you were born in: ' + (2018 - parseInt(input)); // output response
+    answer = 'Ok'; // output response
     waitTime = 5000;
     question = 'Where do you live?'; // load next question
   } else if (questionNum == 2) {
