@@ -55,41 +55,53 @@ function bot(data, socket, questionNum) {
     waitTime = 5000;
     question = 'What type of cheese? Our options are mozzarella, provolone and cheddar'; // load next question
   } else if (questionNum == 1) {
-    answer = 'Ok'; // output response
-    waitTime = 5000;
-    question = 'Where do you live?'; // load next question
-  } else if (questionNum == 2) {
-    answer = 'Cool! I have never been to ' + input + '.';
-    waitTime = 5000;
-    question = 'Whats your favorite color?'; // load next question
-  } else if (questionNum == 3) {
-    answer = 'Ok, ' + input + ' it is.';
-    socket.emit('changeBG', input.toLowerCase());
-    waitTime = 5000;
-    question = 'Can you still read the font?'; // load next question
-  } else if (questionNum == 4) {
-    if (input.toLowerCase() === 'yes' || input === 1) {
+
+    if (input.toLowerCase() === 'mozzarella' 
+     || input.toLowerCase() === 'provolone'
+     || input.toLowerCase() === 'cheddar' || input === 1) {
       answer = 'Perfect!';
       waitTime = 5000;
-      question = 'Whats your favorite place?';
-    } else if (input.toLowerCase() === 'no' || input === 0) {
-      socket.emit('changeFont', 'white'); /// we really should look up the inverse of what we said befor.
-      answer = ''
-      question = 'How about now?';
-      waitTime = 0;
-      questionNum--; // Here we go back in the question number this can end up in a loop
+      question = 'Whats your address?';
     } else {
-      question = 'Can you still read the font?'; // load next question
-      answer = 'I did not understand you. Could you please answer "yes" or "no"?'
+      question = 'What type of cheese? Our options are mozzarella, provolone and cheddar'; // load next question
+      answer = 'I did not understand you. Could you please answer "mozzarella" or "provolone" or "cheddar"?'
       questionNum--;
       waitTime = 5000;
     }
-    // load next question
-  } else {
-    answer = 'I have nothing more to say!'; // output response
+  } 
+  else  {
+  answer = 'I have nothing more to say!'; // output response
     waitTime = 0;
     question = '';
-  }
+  } 
+  // else if (questionNum == 3) {
+  //   answer = 'Ok, ' + input + ' it is.';
+  //   socket.emit('changeBG', input.toLowerCase());
+  //   waitTime = 5000;
+  //   question = 'Can you still read the font?'; // load next question
+  // } else if (questionNum == 4) {
+  //   if (input.toLowerCase() === 'yes' || input === 1) {
+  //     answer = 'Perfect!';
+  //     waitTime = 5000;
+  //     question = 'Whats your favorite place?';
+  //   } else if (input.toLowerCase() === 'no' || input === 0) {
+  //     socket.emit('changeFont', 'white'); /// we really should look up the inverse of what we said befor.
+  //     answer = ''
+  //     question = 'How about now?';
+  //     waitTime = 0;
+  //     questionNum--; // Here we go back in the question number this can end up in a loop
+  //   } else {
+  //     question = 'Can you still read the font?'; // load next question
+  //     answer = 'I did not understand you. Could you please answer "yes" or "no"?'
+  //     questionNum--;
+  //     waitTime = 5000;
+  //   }
+  //   // load next question
+  // } else {
+  //   answer = 'I have nothing more to say!'; // output response
+  //   waitTime = 0;
+  //   question = '';
+  // }
 
 
   /// We take the changed data and distribute it across the required objects.
