@@ -10,8 +10,8 @@ To submit your lab, fork [this repository](https://github.com/FAR-Lab/IDD-Fa18-L
 
 **Describe what changes you made to the baseline chatbot here. Don't forget to push your modified code to this repository.**
 
-I made a chatbot for ordering pizza. It asks the user for the type of crust, cheese and for his/her address. I made sure that the user has to write the exact string for the cheese.
+I made a chatbot for ordering pizza. It asks the user for the type of crust, cheese and for his/her address. I made sure that the user has to write the exact string for the cheese. The chatbot considers the user's answers when replying, for example, it says "Nice, thin then" when refering to the pizza crust.
 
-## Record someone trying out your ChatBot
+## Chatbot in action
 
-**Using a phone or other video device, record someone trying out your ChatBot. Upload that video to this repository and link to it here!**
+https://www.youtube.com/watch?v=Cxh-f3t16pg
