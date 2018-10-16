@@ -1,6 +1,6 @@
 # ChatBot
 
-*A lab report by John Q. Student*
+*A lab report by Manuel Viejo*
 
 ## In this Report
 
@@ -10,9 +10,8 @@ To submit your lab, fork [this repository](https://github.com/FAR-Lab/IDD-Fa18-L
 
 **Describe what changes you made to the baseline chatbot here. Don't forget to push your modified code to this repository.**
 
+I made a chatbot for ordering pizza. It asks the user for the type of crust, cheese and for his/her address. I made sure that the user has to write the exact string for the cheese.
+
 ## Record someone trying out your ChatBot
 
 **Using a phone or other video device, record someone trying out your ChatBot. Upload that video to this repository and link to it here!**
-
----
-Starter code by [David Goedicke](mailto:da.goedicke@gmail.com), closely based on work by [Nikolas Martelaro](mailto:nmartelaro@gmail.com) and [Captain Anonymous](https://codepen.io/anon/pen/PEVYXz), who forked original work by [Ian Tairea](https://codepen.io/mrtairea/pen/yJapwv).
