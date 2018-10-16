@@ -70,7 +70,7 @@ function bot(data, socket, questionNum) {
     }
   } 
   else  {
-  answer = 'I have nothing more to say!'; // output response
+  answer = 'Ok, your pizza is on the way!'; // output response
     waitTime = 0;
     question = '';
   } 
